@@ -8,44 +8,52 @@ public class FibonacciCode
 		System.out.println("Veuillez saisir Le nombre a coder :");
 		int nbrACoder = saisieUtilisateur.nextInt();
 		saisieUtilisateur.close();
-		int nbrBits=nbrBits(nbrACoder);
-		System.out.println("nombre de bits necessaire pour la representation binaire est: "+nbrBits);
-		int nbrBitsFib=nbrBitsFib(nbrBits);
-		System.out.println("nombre de bits necessaire pour la representation fibo est: "+nbrBitsFib);
-		//System.out.println(fib(nbrBits));
+		int nbrBits = nbrBits(nbrACoder);
+		System.out.println("nombre de bits necessaire pour la representation binaire est: " + nbrBits);
+		int nbrBitsFib = nbrBitsFib(nbrBits);
+		System.out.println("nombre de bits necessaire pour la representation fibo est: " + nbrBitsFib);
+		// System.out.println(fib(nbrBits));
 		int tableauDeBits[] = new int[nbrBitsFib];
 		System.out.println("La representation en fibonacci est: ");
 		while (nbrBitsFib > 0)
 		{
-			
+
 			if (nbrACoder - fib(nbrBitsFib) >= 0)
 			{
 
-				tableauDeBits[nbrBitsFib-1] = 1;
-				//System.out.println ("À l'emplacement " + (nbrBits-1) +" du tableau nous avons = " + tableauDeBits[nbrBits-1]);
-				System.out.print(tableauDeBits[nbrBitsFib-1]);
+				tableauDeBits[nbrBitsFib - 1] = 1;
+				// System.out.println ("À l'emplacement " + (nbrBits-1)
+				// +" du tableau nous avons = " + tableauDeBits[nbrBits-1]);
+				System.out.print(tableauDeBits[nbrBitsFib - 1]);
 				nbrACoder = nbrACoder - fib(nbrBitsFib);
 			}
 			else
 			{
-				tableauDeBits[nbrBitsFib-1] = 0;
-				//System.out.println ("À l'emplacement " + (nbrBits-1) +" du tableau nous avons = " + tableauDeBits[nbrBits-1]);
-				System.out.print(tableauDeBits[nbrBitsFib-1]);
+				tableauDeBits[nbrBitsFib - 1] = 0;
+				// System.out.println ("À l'emplacement " + (nbrBits-1)
+				// +" du tableau nous avons = " + tableauDeBits[nbrBits-1]);
+				System.out.print(tableauDeBits[nbrBitsFib - 1]);
 
 			}
-			
-			nbrBitsFib = nbrBitsFib - 1;
-				//System.out.println (tableauDeBits);
-				
 
-				
-				
+			nbrBitsFib = nbrBitsFib - 1;
+			// System.out.println (tableauDeBits);
+
 		}
 		System.out.println();
 
+		int A[] = Step2.step(tableauDeBits);
 		
+		for (int i = (A.length - 1); i >= 0; i--)
+		{
+
+			System.out.print(A[i]);
+
+		}
 		
 	}
+
+	
 
 	public static int fib(int a)
 	{
@@ -58,18 +66,21 @@ public class FibonacciCode
 			return (fib(a - 2) + fib(a - 1));
 		}
 	}
-	
-	public static int nbrBits(int a){
-		int n=1;
-		while(a>0){
-			a=a>>1;
+
+	public static int nbrBits(int a)
+	{
+		int n = 1;
+		while (a > 0)
+		{
+			a = a >> 1;
 			n++;
 		}
 		return n;
 	}
-	
-	public static int nbrBitsFib(int n){
-		return (int) (1.44*n-0.67);
+
+	public static int nbrBitsFib(int n)
+	{
+		return (int) (1.44 * n - 0.67);
 	}
 
 }
