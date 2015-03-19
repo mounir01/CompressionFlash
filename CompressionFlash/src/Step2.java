@@ -5,15 +5,14 @@ public class Step2
 	{
 		int l = T.length;
 		int a = 0;
-		while (a < l-2)
+		while (a < l - 2)
 		{
 
 			if (T[a] == 0)
 			{
 				if (T[a + 1] == 1)
 				{
-					// T[a] = 0;
-					// T[a + 1] = 1;
+
 					a = a + 2;
 				}
 				else
@@ -21,7 +20,7 @@ public class Step2
 					if (T[a + 2] == 0)
 
 					{
-						// T[a] = 0;
+
 						T[a + 1] = 1;
 						a = a + 2;
 					}
@@ -42,6 +41,14 @@ public class Step2
 
 		}
 
+		System.out.println("le resultat de la 2eme Etape: ");
+		for (int i = 0; i < T.length; i++)
+		{
+
+			System.out.print(T[i]);
+
+		}
+		System.out.println();
 		return T;
 
 	}
