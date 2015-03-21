@@ -15,6 +15,14 @@ public class CalculNombreImportant
 	{
 		return (int) (1.44 * n - 0.67);
 	}
+	public static int nbrBitsAlt(int nbrACoder1, int m)
+	{int r=0,k=2;
+	while(AlternativeAlgorithm.alter(k, m)<=nbrACoder1){
+		r++;
+		k++;
+	}
+		return r;
+	}
 	
 	public static int[] representation2Nbr(int b[])
 	{
