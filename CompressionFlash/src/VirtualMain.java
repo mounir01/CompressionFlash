@@ -12,14 +12,32 @@ public class VirtualMain {
 			System.out.println();
 		}*/
 		//System.out.println("r = "+CalculNombreImportant.nbrBitsAlt(5132664, 3));
-		Scanner saisieUtilisateur = new Scanner(System.in);
+		//-------------------------------------------------
+		/*Scanner saisieUtilisateur = new Scanner(System.in);
 		System.out.println("1ere Etape: ");
 		System.out.println("Veuillez saisir Le nombre m :");
 		int m = saisieUtilisateur.nextInt();
 		System.out.println("Veuillez saisir Le 1er nombre a coder :");
 		int nbrACoder1 = saisieUtilisateur.nextInt();
 		saisieUtilisateur.close();
-		int tableauStep1[] = Step1Alter.step1Alter(nbrACoder1, m);
+		int tableauStep1[] = Step1Alter.step1Alter(nbrACoder1, m);*/
+		//-------------------------------------------------
+		int tableauStep2[]={1,0,0,0,1,0,0,1,0,0,1,0,0,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,0,1,0,0,1,0,0,1,0,0};
+		int data1[]={0,0,1,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1};
+		int tableauStep3[]=Step3Alter.step3(tableauStep2, data1, 3);
+		System.out.println();
+		for (int i = 0; i < tableauStep3.length; i++) {
+			System.out.print(tableauStep3[i]);
+		}
+		System.out.println();
+		int data2[]={1,0,1,1,0,1,1,1,0,1,0,0,1,0,1,0,1,1,1,1,0,1,1,1};
+		int booster[]=Step3Alter.step3(tableauStep3, data2, 3);
+		System.out.println();
+		for (int i = 0; i < booster.length; i++) {
+			System.out.print(booster[i]);
+		}
+		System.out.println();
+
 	}
 
 }
