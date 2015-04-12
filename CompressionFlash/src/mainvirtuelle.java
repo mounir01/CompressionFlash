@@ -5,8 +5,8 @@ public class mainvirtuelle
 	{
 		int T[] = { 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1 };
 
-		int B[] = Step2Alter.step(5, 24, T);
-		for (int i = 0; i < 5; i++)
+		int B[] = Step2Alter.step(4, 24, T);
+		for (int i = 0; i < 4; i++)
 		{
 			System.out.print(B[i]);
 			System.out.print(",");

@@ -10,8 +10,12 @@ public class Step2Alter
 		while (i < r)
 		{
 			int j = 0;
-
-			if (T[i] == 0)
+			
+			if(T[i]==0 && i==0)
+			{
+				i = i + 1;
+			}
+			else if (T[i] == 0 && T[i-1]==1)
 			{
 				while (T[i] == 0)
 				{
@@ -42,7 +46,7 @@ public class Step2Alter
 		while (i <= T.length)
 		{
 			
-			if (T[i] == 0 && A[k] >= m - 1)
+			if (T[i] == 0 && A[k] > m - 1)
 			{
 
 				while (j <= m * ((A[k] - m + 1) / m))
@@ -60,7 +64,7 @@ public class Step2Alter
 				k = k + 1;
 			}
 
-			else if (T[i] == 1 && A[k] >= (m - 1))
+			else if (T[i] == 1 && A[k] > (m - 1))
 			{
 
 				i = i + 1;

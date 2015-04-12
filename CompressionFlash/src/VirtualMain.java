@@ -21,8 +21,8 @@ public class VirtualMain {
 		int nbrACoder1 = saisieUtilisateur.nextInt();
 		saisieUtilisateur.close();
 		int tableauStep1[] = Step1Alter.step1Alter(nbrACoder1, m);*/
-		//-------------------------------------------------
-		int tableauStep2[]={1,0,0,0,1,0,0,1,0,0,1,0,0,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,0,1,0,0,1,0,0,1,0,0};
+		//------------------Booster-------------------
+		/*int tableauStep2[]={1,0,0,0,1,0,0,1,0,0,1,0,0,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,0,1,0,0,1,0,0,1,0,0};
 		int data1[]={0,0,1,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1};
 		int tableauStep3[]=Step3Alter.step3(tableauStep2, data1, 3);
 		System.out.println();
@@ -36,8 +36,18 @@ public class VirtualMain {
 		for (int i = 0; i < booster.length; i++) {
 			System.out.print(booster[i]);
 		}
+		System.out.println();*/
+        //----------------------------------------------
+		int data[]={0,0,1,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,0,0,1};
+		int A[]={5,4,6,2};
+		for (int i = 0; i < data.length; i++) {
+			System.out.print(data[i]+", ");
+		}
+		int Step2[]=Step2AlterTest.E2(3, data, A);
 		System.out.println();
-
+		for (int i = 0; i < Step2.length; i++) {
+			System.out.print(Step2[i]+", ");
+		}
 	}
 
 }
